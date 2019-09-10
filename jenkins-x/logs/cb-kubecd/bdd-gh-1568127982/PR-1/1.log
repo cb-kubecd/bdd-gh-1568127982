@@ -55,15 +55,9 @@ Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [
 
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-source-cb-kubecd-bdd-gh-1568127982-pr-pbfgr[0m to start...
-
-
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-gh-1568127982-pr-pbfgr[0m
 {"level":"warn","ts":1568128225.899194,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
 {"level":"info","ts":1568128227.013861,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-gh-1568127982.git @ master in path /workspace/source"}
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-git-merge[0m to start...
-
 
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:d652ea5561e63045b0c22ed2b2ce4b10c6dd8544,1:ba3245b56a8433a4bce5ab4d56df19ba60753448
@@ -74,14 +68,8 @@ DEBUG: ran clean --force -d . in
 DEBUG: ran git merge ba3245b56a8433a4bce5ab4d56df19ba60753448 in 
 Merged SHA ba3245b56a8433a4bce5ab4d56df19ba60753448 with commit message 'My first PR commit' into base branch master
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-make-linux[0m to start...
-
-
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/bdd-gh-1568127982 main.go
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-build-container-build[0m to start...
-
 
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] No base image, nothing to extract            
@@ -103,14 +91,8 @@ Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [
 2019/09/10 15:10:40 pushed blob: sha256:93dbd984eba84a2906fc5df22cd5439f06cac15f983f0b8b7060c1ea4863f012
 2019/09/10 15:10:42 gcr.io/jenkins-x-bdd2/bdd-gh-1568127982:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:1fcdce59d9876ef31c4a85ca6fea7a5122c0eb75a5c6d7f8ec60e9e61079e687 size: 428
 
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-postbuild-post-build[0m to start...
-
-
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-make-preview[0m to start...
-
 
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
 sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
@@ -127,9 +109,6 @@ Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
 Successfully added Helm repository chartmuseum.jenkins-x.io.
-
-waiting for stage [32mfrom-build-pack[0m : container [32mstep-promote-jx-preview[0m to start...
-
 
 Showing logs for build [32mmeta-cb-kubecd-bdd-gh-156812798-s9cbk-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
 Creating a preview
